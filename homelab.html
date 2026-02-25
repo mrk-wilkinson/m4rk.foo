@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>homelab &mdash; Mark's Basement</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrapper">
+
+    <header>
+      <a class="site-title" href="index.html">mark's b4s3m3nt</a>
+      <p class="tagline">my underground nanometer of the web</p>
+      <nav>
+        <ul>
+          <li><a href="index.html">home</a></li>
+          <li><a href="about.html">about</a></li>
+          <li><a href="homelab.html">homelab</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>homelab</h1>
+      <p>
+        A likely somewhat up to date documentation of my home(dorm)lab.  The dormlab actually runs this site.
+      </p>
+
+      <hr>
+
+      <h2>hardware</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Device</th>
+	    <th>Purpose</th>
+	    <th>Spces</th>
+	    <th>OS</th>
+          </tr>
+        </thead>
+        <tbody>
+	  <tr>
+	    <td>GL-iNet</td>
+            <td>Router and gateway</td>
+            <td>3 ethernet ports.  Wi-FI Access point.</td>
+	    <td>OpenWRT</td>
+          </tr>
+	  <tr>
+            <td>Beelink EQR5 miniPC</td>
+            <td>Primary Proxmox Node</td>
+            <td>8c/16t @ 4.5 GHz w/ 32GB RAM.</td>
+	    <td>Proxmox</td>
+          </tr>
+          <tr>
+            <td>Digital ocean droplet</td>
+            <td>Public IP gateway</td>
+            <td>2vCPUs & 4GB RAM.</td>
+	    <td>Debian</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr>
+
+      <h2>network</h2>
+      <ul>
+        <li>ISP: Wellll, 1/2 digital ocean 1/2 college</li>
+        <li>Router: OpenWRT</li>
+        <li>DNS: pi-hole</li>
+        <li>VPN: Softether for remote access and tailscale as backup</li>
+        <li>Reverse proxy: nginx & rathole</li>
+      </ul>
+
+      <hr>
+
+      <h2>services</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>service</th>
+            <th>software</th>
+            <th>notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>this site</td>
+            <td>nginx</td>
+            <td>static HTML + CSS</td>
+          </tr>
+          <tr>
+            <td>matrix</td>
+            <td>tuwunel</td>
+            <td><a href="mailto:@mark:matrix.m4rk.foo">@mark:matrix.m4rk.foo</a></td>
+          </tr>
+          <tr>
+            <td>bitwarden</td>
+            <td>vaultwarden</td>
+            <td>VM on proxmox</td>
+          </tr>
+          <tr>
+            <td>NAS</td>
+            <td>openmediavault</td>
+            <td>VM on proxmox</td>
+          </tr>
+	  <tr>
+	    <td>DNS</td>
+	    <td>pi-hole</td>
+	    <td>LXC Container on proxmox</td>
+	  </tr>
+	  <tr>
+	    <td>Photos</td>
+	    <td>Immich</td>
+	    <td>VM on proxmox</td>
+	  </tr>
+	  <tr>
+	    <td>VPN</td>
+	    <td>Softether server + bridge</td>
+	    <td>Server runs on VPS with bridge behind LAN</td>
+	  </tr>
+	  <tr>
+	    <td>Books</td>
+	    <td>Calibre</td>
+	    <td>Calibre server on an LXC container for ebooks</td>
+	  </tr>
+        </tbody>
+      </table>
+
+      <hr>
+
+   <!--   <h2>os &amp; stack</h2>
+      <ul>
+        <li>OS: [distro]</li>
+        <li>Containers: [Docker / Podman / LXC]</li>
+        <li>Config management: [Ansible / NixOS / manual]</li>
+        <li>Backups: [strategy]</li>
+      </ul>
+-->
+      <hr>
+
+      <h2>notes</h2>
+      <p class="muted">
+        Ongoing observations, things that broke, things that got fixed.
+      </p>
+      <ul>
+        <li><span class="muted">2026-02-25</span> — site goes live</li>
+      </ul>
+    </main>
+
+    <footer>
+      <p>mark &mdash; made with html &amp; css &mdash; <a href="about.html">about this site</a></p>
+    </footer>
+
+  </div>
+</body>
+</html>

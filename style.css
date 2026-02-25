@@ -1,0 +1,244 @@
+/* mark's basement — stylesheet */
+
+:root {
+  --bg:       #0e0e0e;
+  --bg-alt:   #181818;
+  --border:   #2a2a2a;
+  --text:     #d4d4d4;
+  --muted:    #6b6b6b;
+  --accent:   #7ec8a0;
+  --link:     #7ec8a0;
+  --link-vis: #5a9b76;
+  --max-w:    680px;
+  --mono:     "Courier New", Courier, monospace;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--mono);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  padding: 2rem 1rem;
+}
+
+/* ── layout ── */
+
+.wrapper {
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+/* ── header ── */
+
+header {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+
+header .site-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+header .site-title:hover {
+  text-decoration: underline;
+}
+
+header .tagline {
+  color: var(--muted);
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+}
+
+/* ── nav ── */
+
+nav {
+  margin-top: 0.8rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem 0;
+}
+
+nav ul li::after {
+  content: " /";
+  color: var(--border);
+}
+
+nav ul li:last-child::after {
+  content: "";
+}
+
+nav ul li a {
+  padding-right: 0.4rem;
+}
+
+/* ── main content ── */
+
+main {
+  margin-bottom: 3rem;
+}
+
+/* ── footer ── */
+
+footer {
+  border-top: 1px solid var(--border);
+  padding-top: 1rem;
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+footer a {
+  color: var(--muted);
+}
+
+footer a:hover {
+  color: var(--text);
+}
+
+/* ── typography ── */
+
+h1, h2, h3 {
+  color: var(--accent);
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+h1 { font-size: 1.3rem; margin-bottom: 0.8rem; }
+h2 { font-size: 1.1rem; margin: 2rem 0 0.6rem; }
+h3 { font-size: 0.95rem; margin: 1.5rem 0 0.4rem; }
+
+p {
+  margin-bottom: 1rem;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 1.5rem 0;
+}
+
+/* ── links ── */
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: var(--link-vis);
+}
+
+/* ── lists ── */
+
+ul, ol {
+  padding-left: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+li {
+  margin-bottom: 0.25rem;
+}
+
+/* ── inline code & pre ── */
+
+code {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  padding: 0.1em 0.3em;
+  font-family: var(--mono);
+  font-size: 0.85em;
+  border-radius: 2px;
+}
+
+pre {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  padding: 1rem;
+  overflow-x: auto;
+  margin-bottom: 1rem;
+  font-size: 0.82rem;
+}
+
+pre code {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+/* ── blockquote ── */
+
+blockquote {
+  border-left: 2px solid var(--accent);
+  padding-left: 1rem;
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+/* ── tables ── */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+}
+
+th {
+  text-align: left;
+  color: var(--accent);
+  border-bottom: 1px solid var(--border);
+  padding: 0.3rem 0.5rem;
+}
+
+td {
+  padding: 0.3rem 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+/* ── utility ── */
+
+.muted { color: var(--muted); }
+.accent { color: var(--accent); }
+
+.post-list {
+  list-style: none;
+  padding: 0;
+}
+
+.post-list li {
+  display: flex;
+  gap: 1rem;
+  align-items: baseline;
+  margin-bottom: 0.4rem;
+}
+
+.post-list .date {
+  color: var(--muted);
+  font-size: 0.8rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
