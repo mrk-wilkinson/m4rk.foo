@@ -242,3 +242,35 @@ td {
   white-space: nowrap;
   flex-shrink: 0;
 }
+
+/* ── 88x31 buttons ── */
+
+.button-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.button-grid li {
+  margin: 0;
+}
+
+.button-grid a {
+  display: block;
+  line-height: 0;
+}
+
+.button-grid img {
+  width: 88px;
+  height: 31px;
+  image-rendering: pixelated;
+  border: 1px solid var(--border);
+  display: block;
+}
+
+.button-grid img:hover {
+  border-color: var(--accent);
+}
